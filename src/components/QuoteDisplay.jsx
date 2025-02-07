@@ -11,10 +11,10 @@ const QuoteDisplay = () => {
     const fetchQuote = async () => {
         try {
         setError(null); // Reset error before fetching new quote
-
+            const APIKey = import.meta.env.VITE_API_KEY
         // Fetch request to the quotes API with an authentication key
         const response = await fetch("https://api.api-ninjas.com/v1/quotes", {
-            headers: { "X-Api-Key": "Z3+NemftBv6/dEpXYGGrsw==YbfvfLMQsEqnTNnK" },
+            headers: { "X-Api-Key": APIKey },
         });
 
          // Check if the response is successful
